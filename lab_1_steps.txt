@@ -1,0 +1,44 @@
+STEPS -1
+open file and select new and write file name and save in (".pl") formate
+at first write clauses
+at first line write  clauses: 
+and then in second line write anything but end with (".")
+and write other clauses.
+
+
+STEPS -2 
+select compile and then select make 
+
+in another window 
+open file from the folder 
+write question to find solution either it will accept or reject the value
+like :
+
+?- male(ram).
+true.
+
+?- likes(ram,icecream).
+true 
+
+?- male(X). // to display the many value of the x which have same object .
+X = ram ; // ; use to display one more value of that object
+X = hari ;
+X = gopal.
+
+?- sum(4,9).
+13
+true.
+
+?- max(5,4).
+5
+true.
+
+?- sum(2,5).
+7
+true.
+
+
+
+
+every time when question end the use (".") at the end of the question 
+it will show accepts or reject 
