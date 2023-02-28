@@ -15,3 +15,29 @@ hcf(A,B):-
 
 hcf(A,B):-
      A < B ,Z is A mod B ,W is B-Z ,hcf(A,W).
+
+
+
+
+result:-write("enter first marks:"),
+    read(A), write("enter second marks :"),read(B),write("enter third marks:"),
+    read(C), write("enter fourth marks :"),read(D),write("enter fith marks:"),
+    read(E),write("enter total marks :"),read(F),G is ( (A+B+C+D+E)//F),write("Your grade is : "), write(G),nl,grade(G,_GR).
+
+grade(G,GR):-
+     G>=90 , GR ="you score A grade:", write(GR);
+     G>=75 , GR ="you score A- grade:", write(GR);
+     G>=65 , GR ="you score B++ grade:", write(GR);
+     G>=55 , GR ="you score B grade:", write(GR);
+     G>=45 , GR ="you score C grade:", write(GR);
+     G>=35 , GR ="you score C- grade:", write(GR);
+     GR="sorry you are fail.",write(GR).
+
+
+
+fact(0,1).
+fact(N,F):- N>0,
+     M is N-1,fact(M,Fact),
+     F is N *Fact,
+     write(F),nl.
+
