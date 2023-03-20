@@ -14,3 +14,14 @@ fibo(N,F) :-
    fibo(N2,F2),
    F is F1+F2,
    write(F),nl.
+print_list([H|T]):- write(H),write(","),print_list(T).
+
+sum([],0).
+sum([X|List],Sum):- sum(List,Sum1), Sum is X + Sum1.
+count([],0).
+count([H|List],A):-count(List,A1),A is A1 + 1.
+
+addtoend(H,[],[H]).
+addtoend(X,[H|T],[H|T1]):-addtoend(X,T,T1).
+reversex([],[]).
+reversex([H|T],Y):- reversex(T,T1),addtoend(H,T1,Y).
