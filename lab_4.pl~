@@ -36,3 +36,16 @@ brother(X,Y):-male(X),mother(F,Y),mother(F,X).
 uncle(X,Y):-parent(Z,Y),brother(Z,X).
 ancestor(X,Y):- parent(X,Y).
 ancestor(X,Y):-parent(X,Z),ancestor(Z,Y).
+
+parent(hari,gopal).
+parent(simran,bijay).
+parent(ramesh,bijay).
+
+father(X,Y):- male(X),parent(X,Y).
+mother(X,Y):- female(X),parent(X,Y).
+
+grandfather(X,Y):- male(X),parent(X,Z),parent(Z,Y).
+grandmother(X,Y):- female(X),parent(X,Z),parent(Z,Y).
+sister(X,Y):- female(X),father(F,Y),father(F,X).
+sister(X,Y):- female(X),mother(F,Y),mother(F,X).
+aunt(X,Y):-female(X),parent(Z,Y),parent(Z,X).
